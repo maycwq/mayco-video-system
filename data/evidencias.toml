@@ -1,0 +1,1048 @@
+# registro de evidências. cada afirmação técnica ou criativa importante do repositório aponta para um id daqui.
+# classes:
+#   fato-observado        visto diretamente numa fonte (camada, keyframe, frame de vídeo, metadado)
+#   resultado-verificado  confirmado por medição ou teste sobre um render ou arquivo
+#   instrucao-explicita   pedido do usuário, implementado ou não
+#   implementacao-relatada declarado em conversa ou relato, sem verificação independente
+#   interpretacao         inferência sustentada por evidências citadas em "relacionadas"
+#   hipotese              ideia que ainda precisa de investigação
+#   decisao-nova          proposta feita durante a reconstrução
+# confianca: alta | media | baixa. confiança não substitui fonte.
+# identificadores entre crases são nomes de camada, node ids ou valores copiados das fontes.
+
+# ---------------------------------------------------------------- pedido e relato preparatório
+[[evidencia]]
+id = "EV-REQ-01"
+classe = "instrucao-explicita"
+fonte = "S-PEDIDO"
+localizador = "seções 0, 1 e 23"
+afirmacao = "o repositório deve ensinar a investigar, interpretar, decidir, construir, diagnosticar e revisar; não deve ser design system convencional, biblioteca de templates nem catálogo de componentes."
+confianca = "alta"
+escopo = "sistema inteiro"
+
+[[evidencia]]
+id = "EV-REQ-02"
+classe = "instrucao-explicita"
+fonte = "S-PEDIDO"
+localizador = "seção 17"
+afirmacao = "todo o repositório em português brasileiro, seguindo o manual de tom de voz: minúsculas em prosa, sem travessão, sem linguagem de agência, preservando identificadores técnicos."
+confianca = "alta"
+escopo = "escrita do repositório"
+
+[[evidencia]]
+id = "EV-REQ-03"
+classe = "instrucao-explicita"
+fonte = "S-PEDIDO"
+localizador = "seções 5 (hipótese C) e 23"
+afirmacao = "Bootzy TM não deve virar obrigação em todo trabalho novo; decisões comprovadas devem ser preservadas sem transformar toda escolha passada em obrigação."
+confianca = "alta"
+escopo = "tipografia e sistema"
+
+[[evidencia]]
+id = "EV-REQ-04"
+classe = "instrucao-explicita"
+fonte = "S-PEDIDO"
+localizador = "seção 16"
+afirmacao = "não publicar conversas privadas, credenciais, fontes tipográficas proprietárias, vídeos, músicas ou fotos de terceiros sem verificar direitos."
+confianca = "alta"
+escopo = "publicação"
+
+[[evidencia]]
+id = "EV-PREP-01"
+classe = "implementacao-relatada"
+fonte = "S-PREP"
+localizador = "seção 6, REELS/02"
+afirmacao = "REELS/02 teria fonte contínua de aproximadamente 35,9 s e o princípio `COVERED ≠ REMOVED`; render horizontal 1920x1080, 30 fps, ~35,947 s."
+confianca = "media"
+escopo = "REELS/02"
+notas = "a duração da fonte bate com o nome da camada no Figma (EV-R02-03). o render citado não estava acessível."
+
+[[evidencia]]
+id = "EV-PREP-02"
+classe = "implementacao-relatada"
+fonte = "S-PREP"
+localizador = "seção 6, REELS/04"
+afirmacao = "REELS/04 4:3: MP4 1440x1080, 30 fps, ~31,744 s; fonte no Figma próxima de 31,667 s; sequência tipográfica cobrar mais, mudar a peça, rever o processo, aceitar outra margem."
+confianca = "media"
+escopo = "REELS/04"
+
+[[evidencia]]
+id = "EV-PREP-03"
+classe = "implementacao-relatada"
+fonte = "S-PREP"
+localizador = "seção 6, REELS/07"
+afirmacao = "REELS/07 teria BASE 47,600 s, FINAL projetado 60,650 s, inserções somando 13,050 s, PAUSE INSERTS, overlays e captions com offsets; o usuário relatou preto depois de ~47,7 s apesar de correções."
+confianca = "media"
+escopo = "REELS/07"
+notas = "a estrutura atual do arquivo não tem essas camadas; ver EV-R07-01 e EV-R07-02."
+
+[[evidencia]]
+id = "EV-PREP-04"
+classe = "implementacao-relatada"
+fonte = "S-PREP"
+localizador = "seção 6, REELS/08"
+afirmacao = "no REELS/08 houve primeiro crítica por falta de presença, variedade, inteligência compositiva e relação com a música; depois crítica contra excesso de movimentos, rotações e recursos arbitrários."
+confianca = "media"
+escopo = "REELS/08"
+notas = "sem acesso às mensagens. a ordem das críticas e os artefatos a que se referem não foram verificados."
+
+[[evidencia]]
+id = "EV-PREP-05"
+classe = "implementacao-relatada"
+fonte = "S-PREP"
+localizador = "seção 6, REELS/09"
+afirmacao = "no REELS/09 houve rejeição de caption plates e de composições com aparência de cards."
+confianca = "media"
+escopo = "REELS/09"
+
+# ---------------------------------------------------------------- publicações
+[[evidencia]]
+id = "EV-IG-01"
+classe = "resultado-verificado"
+fonte = "S-IG-A"
+localizador = "metadados yt-dlp + ffprobe"
+afirmacao = "reel DcEFmHHuMeU publicado em 2026-08-15, vp9 1916x1078, 30 fps, 35,933 s, aac 44,1 kHz, -14,4 LUFS integrado; legenda fala de last.fm, letterboxd e fotos. corresponde ao REELS/02."
+confianca = "alta"
+escopo = "REELS/02"
+relacionadas = ["EV-R02-01"]
+
+[[evidencia]]
+id = "EV-IG-02"
+classe = "resultado-verificado"
+fonte = "S-IG-B"
+localizador = "metadados yt-dlp + ffprobe"
+afirmacao = "reel DcZTxxxp9BK publicado em 2026-08-23, vp9 1440x1080, 30 fps, 49,133 s, -16,0 LUFS; legenda sobre aumentar ou abaixar o volume de partes da personalidade. corresponde ao REELS/05 (autoedição, 4:3, 49,1 s), não ao REELS/07."
+confianca = "alta"
+escopo = "REELS/05"
+relacionadas = ["EV-R05-01"]
+
+[[evidencia]]
+id = "EV-IG-03"
+classe = "resultado-verificado"
+fonte = "S-IG-C"
+localizador = "metadados yt-dlp + ffprobe"
+afirmacao = "reel DceAVGIOUhc publicado em 2026-08-25, h264 960x720, 30 fps, 31,733 s, -14,2 LUFS; legenda sobre custo, margem e decisão na olue. corresponde ao REELS/04 4:3."
+confianca = "alta"
+escopo = "REELS/04"
+relacionadas = ["EV-R04-01"]
+
+[[evidencia]]
+id = "EV-IG-04"
+classe = "fato-observado"
+fonte = "S-IG-A"
+localizador = "frames 1 fps e 2,6 s, 7,9 s, 18,6 s, 22,6 s, 25,4 s, 31,0 s"
+afirmacao = "no REELS/02 publicado a legenda de uma palavra muda de cor conforme o fundo: preta sobre o desktop claro, branca sobre rosto e superfície teal, amarela sobre as telas do app."
+confianca = "alta"
+escopo = "REELS/02, legendas"
+
+[[evidencia]]
+id = "EV-IG-05"
+classe = "fato-observado"
+fonte = "S-IG-A"
+localizador = "frame ~18,6 s"
+afirmacao = "em ~18,6 s a legenda `o`, grande e branca, aparece sobre o bloco editorial `mas nenhum tinha` na mesma família e cor, disputando leitura com o texto editorial."
+confianca = "media"
+escopo = "REELS/02, legenda x texto editorial"
+
+[[evidencia]]
+id = "EV-IG-06"
+classe = "resultado-verificado"
+fonte = "S-QA-LOCAL"
+localizador = "blackdetect d=0.1 pix_th=0.10 sobre DceAVGIOUhc"
+afirmacao = "o REELS/04 publicado tem 1,0 s detectado como preto entre 18,90 e 19,90 s; os frames mostram que é o início da sequência de decisão em fundo preto, com só `cobrar mais` na tela. falso positivo de QA, preto intencional."
+confianca = "alta"
+escopo = "REELS/04, QA"
+
+[[evidencia]]
+id = "EV-IG-07"
+classe = "resultado-verificado"
+fonte = "S-QA-LOCAL"
+localizador = "faster-whisper small pt sobre os três reels"
+afirmacao = "a transcrição automática erra nomes próprios e termos de produto: Last.fm vira `leis de FM`, Letterboxd vira `ler o unboxing`, março vira `massa`, play vira `prei`, margem vira `imagem`, rever vira `review`."
+confianca = "alta"
+escopo = "pipeline de legenda"
+
+[[evidencia]]
+id = "EV-IG-08"
+classe = "fato-observado"
+fonte = "S-IG-B"
+localizador = "frames 1 fps 0 a 48 s"
+afirmacao = "REELS/05 publicado alterna tipografia cinética sobre o rosto, placa branca com recortes do rosto, placa vermelho-laranja com REVISÃO vazada, teal com TV laranja e tweets satíricos, placa preta de colagem e placa branca com CORRETO; termina no rosto com legenda pequena."
+confianca = "alta"
+escopo = "REELS/05"
+
+[[evidencia]]
+id = "EV-IG-09"
+classe = "resultado-verificado"
+fonte = "S-QA-LOCAL"
+localizador = "blackdetect sobre DcZTxxxp9BK"
+afirmacao = "REELS/05 publicado tem 0,13 s de preto em 28,20 s, início intencional da placa preta de colagem."
+confianca = "alta"
+escopo = "REELS/05, QA"
+
+[[evidencia]]
+id = "EV-IG-10"
+classe = "resultado-verificado"
+fonte = "S-QA-LOCAL"
+localizador = "freezedetect e silencedetect -45 dB sobre DcEFmHHuMeU"
+afirmacao = "REELS/02 publicado: sem preto; imagem quase parada em 6,13 a 7,50 s, 15,00 a 16,43 s e 20,43 a 21,63 s; silêncios curtos em 20,13, 23,27, 29,62 e 33,02 s; fala contínua durante os 21 s em que o talking head está coberto."
+confianca = "alta"
+escopo = "REELS/02, áudio e playback"
+relacionadas = ["EV-R02-03"]
+
+# ---------------------------------------------------------------- REELS/02
+[[evidencia]]
+id = "EV-R02-01"
+classe = "fato-observado"
+fonte = "S-FIG-PRINCIPAL"
+localizador = "página 182:2964"
+afirmacao = "a página do REELS/02 tem três stages: `REELS/02 · HORIZONTAL · 1920×1080 · TEMPORAL STAGE V0` (239:6876), o stage horizontal 188:2964 e `REELS/02 · TIKTOK · 1080×1920 · TEMPORAL STAGE` (1638:3389)."
+confianca = "alta"
+escopo = "REELS/02"
+
+[[evidencia]]
+id = "EV-R02-02"
+classe = "fato-observado"
+fonte = "S-FIG-PRINCIPAL"
+localizador = "188:2964, filhos diretos"
+afirmacao = "o stage horizontal é organizado em camadas nomeadas por função e tempo: desk real, teaser do Figma, fonte contínua, cover safety, `B2 · 06.020–16.920 · WORKSPACE · MUSIC → FILMS → PHOTOS`, `B3 · 17.240–23.280 · DESKTOP BREAKS → EDITORIAL MATTER`, `B4 · 23.770–27.080 · PRODUCT PAYOFF`, hook, captions, pointer e banco de glifos Bootzy."
+confianca = "alta"
+escopo = "REELS/02"
+
+[[evidencia]]
+id = "EV-R02-03"
+classe = "fato-observado"
+fonte = "S-FIG-PRINCIPAL"
+localizador = "188:2971 `SOURCE VIDEO · CONTINUOUS 00.000→35.900 · TEMP MOV IMPORT REQUIRED`"
+afirmacao = "a fonte é um video fill contínuo de 35,9 s; vira janela em 0,88→1,72 s (escala 0,72), minimiza em 5,54→6,02 s (escala 0,08 em direção ao dock), fica com opacidade 0 de 6,02 a 27,08 s e volta em 27,08→33,05 s até a tela cheia."
+confianca = "alta"
+escopo = "REELS/02, fonte e tempo"
+
+[[evidencia]]
+id = "EV-R02-04"
+classe = "fato-observado"
+fonte = "S-FIG-PRINCIPAL"
+localizador = "188:2978 e 239:6960"
+afirmacao = "a V0 tinha `COVER SAFETY · OPAQUE · 06.020→27.080 · TALKING HEAD MUST NEVER LEAK`; o stage atual troca por `COVER SAFETY · TRANSPARENT · SOURCE OPACITY-GATED 06.020→27.080`."
+confianca = "alta"
+escopo = "REELS/02, cobertura da fonte"
+
+[[evidencia]]
+id = "EV-R02-05"
+classe = "fato-observado"
+fonte = "S-FIG-PRINCIPAL"
+localizador = "265:2996 `POINTER · SOURCE MINIMIZE · REAL macOS 26 · YELLOW CONTROL`"
+afirmacao = "um ponteiro real aparece em 5,12 s, vai até o botão amarelo da janela da fonte, clica (escala 1→0,84→1 entre 5,43 e 5,56 s) e some em 5,86 s; a minimização da fonte começa em 5,54 s."
+confianca = "alta"
+escopo = "REELS/02, causalidade"
+
+[[evidencia]]
+id = "EV-R02-06"
+classe = "fato-observado"
+fonte = "S-FIG-PRINCIPAL"
+localizador = "210:2964 e 265:3081, 265:3087"
+afirmacao = "o desk usa wallpaper, menu bar, dock e controles reais do macOS 26; os indicadores de app aberto do Safari (6,02 s) e do Photos (8,9 s) acendem quando esses apps entram em cena."
+confianca = "alta"
+escopo = "REELS/02, ambiente"
+
+[[evidencia]]
+id = "EV-R02-07"
+classe = "fato-observado"
+fonte = "S-FIG-PRINCIPAL"
+localizador = "190:2964 B2"
+afirmacao = "Last.fm, Letterboxd e Photos entram como `SYSTEM WINDOW WRAPPER · ... · timing preserved` em 7,46, 8,02 e 8,86 s; a janela em foco fica com opacidade 1 e as outras caem para 0,3 a 0,5; o `GLOBAL POINTER · REAL macOS 26 · SYSTEM ACTIONS ONLY` clica (escala 0,88) em 7,76, 8,20, 8,92, 10,42, 12,33 e 14,39 s."
+confianca = "alta"
+escopo = "REELS/02, interfaces"
+
+[[evidencia]]
+id = "EV-R02-08"
+classe = "fato-observado"
+fonte = "S-FIG-PRINCIPAL"
+localizador = "nomes `BOOTZY CAPTION 0NN · início–fim · palavra` em 188:2979"
+afirmacao = "as palavras ditas e as janelas coincidem: `Last.fm` em 7,86 s e a janela Last.fm em 7,46→7,86 s; `Letterboxd` em 8,28 s e a janela em 8,02→8,28 s."
+confianca = "alta"
+escopo = "REELS/02, sincronia"
+
+[[evidencia]]
+id = "EV-R02-09"
+classe = "fato-observado"
+fonte = "S-FIG-PRINCIPAL"
+localizador = "241:3157 TEXT HOOK"
+afirmacao = "o hook guarda o tratamento anterior oculto (`HOOK SOURCE · previous treatment · hidden`: palavras vindo de até 650 px, escala 0,62 a 0,94 e espalhamento) ao lado do refinado (`HOOK · BOOTZY TM · refined editorial title`: cada palavra só sobe 18 px e ganha opacidade em 0,18 s, em 0,88, 1,11, 1,53, 1,86 e 2,46 s; o bloco recua para 0,82 em 2,78→3,35 s)."
+confianca = "alta"
+escopo = "REELS/02, motion tipográfico"
+
+[[evidencia]]
+id = "EV-R02-10"
+classe = "resultado-verificado"
+fonte = "S-QA-LOCAL"
+localizador = "whisper sobre DcEFmHHuMeU x tempos do hook refinado"
+afirmacao = "as palavras do hook entram junto com a fala: estou 0,88 s (fala 0,92), construindo 1,11 (1,04), um app 1,53 (1,46 a 1,62), pra garotas 1,86 (1,74 a 1,96), e gays 2,46 (2,36 a 2,50)."
+confianca = "alta"
+escopo = "REELS/02, sincronia"
+
+[[evidencia]]
+id = "EV-R02-11"
+classe = "fato-observado"
+fonte = "S-FIG-PRINCIPAL"
+localizador = "192:3061 B3"
+afirmacao = "em 17,24 s a superfície autoral teal (`AUTHORIAL SURFACE · mayco overlay · teal · 17.55→payoff`) toma o quadro; os fragmentos de música, filmes e foto afundam e encolhem até 0,7; o texto `cada lugar tinha uma parte / mas nenhum tinha o mês inteiro` tem versão anterior oculta e versão `BOOTZY TM · refined`."
+confianca = "alta"
+escopo = "REELS/02, abstração editorial"
+
+[[evidencia]]
+id = "EV-R02-12"
+classe = "fato-observado"
+fonte = "S-FIG-PRINCIPAL"
+localizador = "192:3068 `S07 · 20.610–23.280 · PLAY + RATING + PHOTO · INSUFFICIENT TOGETHER`"
+afirmacao = "estão ocultos `PLAY · AUTHORIAL GENERIC · no library equivalent`, `RATING · Editorial Text · SYMBOLIC NO VALUE` e `PHOTO · Media/Slot REAL · PLACEHOLDER`; no lugar entram efêmeras (cd holográfico, botão estrela amarela, câmera sony rosa) com rótulos Bootzy `play`, `nota`, `foto`."
+confianca = "alta"
+escopo = "REELS/02, interface genérica rejeitada"
+
+[[evidencia]]
+id = "EV-R02-13"
+classe = "fato-observado"
+fonte = "S-FIG-PRINCIPAL"
+localizador = "193:2964 B4"
+afirmacao = "o payoff usa três `COMUNIDADE · Media/Slot REAL` com video fill de gravações do produto (registro/entrada, memória, contexto), entrando escalonados em 23,6, 24,38 e 25,02 s; saem encolhendo para 0,62 em 27,08→30,73 s quando a pessoa volta."
+confianca = "alta"
+escopo = "REELS/02, produto"
+
+[[evidencia]]
+id = "EV-R02-14"
+classe = "fato-observado"
+fonte = "S-FIG-PRINCIPAL"
+localizador = "188:2966 TEASER"
+afirmacao = "o teaser se chama `REAL FIGMA UI3 + COMUNIDADE`, mas o conteúdo é `REAL COMUNIDADE CANVAS SLOT · 1409:47 · NO INVENTED UI` com image fill; placeholders `DO NOT TREAT AS FIGMA CHROME` e `REAL FIGMA CANVAS REQUIRED` estão ocultos. não há instâncias do kit UI3 no stage."
+confianca = "alta"
+escopo = "REELS/02, bibliotecas"
+
+[[evidencia]]
+id = "EV-R02-15"
+classe = "fato-observado"
+fonte = "S-FIG-PRINCIPAL"
+localizador = "188:2979 CAPTIONS"
+afirmacao = "as legendas são `Narrative/Accessibility Caption · WORD-BY-WORD · SRT SOURCE OF TRUTH`: 96 instâncias originais ocultas (`CAPTION TIMING SOURCE`) e 96 frames `BOOTZY CAPTION` com glifos vetoriais, sem nenhum nó de texto."
+confianca = "alta"
+escopo = "REELS/02, legendas"
+
+[[evidencia]]
+id = "EV-R02-16"
+classe = "fato-observado"
+fonte = "S-FIG-PRINCIPAL"
+localizador = "300:3046, 300:3048, 300:3050 e similares"
+afirmacao = "as efêmeras do desk derivam devagar: ±4 a 7 px, ±1,2° e escala 1,01 em ciclos de 3 a 4 s, opacidade 0,82 a 0,92; as que atravessam a transição se chamam `transition survivor`."
+confianca = "alta"
+escopo = "REELS/02, motion ambiente"
+
+[[evidencia]]
+id = "EV-R02-17"
+classe = "fato-observado"
+fonte = "S-FIG-PRINCIPAL"
+localizador = "1638:3389 x 188:2964"
+afirmacao = "a versão vertical tem trajetórias próprias: a fonte desce (TXY 0,620, escala 0,12) em vez de ir pro lado, o payoff sai pra cima, as janelas do B2 ficam empilhadas e o ponteiro tem outro caminho; o hook ganha novo layout (920x1040)."
+confianca = "alta"
+escopo = "REELS/02, adaptação vertical"
+
+[[evidencia]]
+id = "EV-R02-18"
+classe = "fato-observado"
+fonte = "S-FIG-PRINCIPAL"
+localizador = "B2 do stage 1638:3389, `EPHEMERA · camera sony pink · DESK photos depth`"
+afirmacao = "na versão vertical a câmera rosa manteve x=1115 (coordenada do horizontal) dentro de um quadro de 1080 de largura; está fora da área visível."
+confianca = "alta"
+escopo = "REELS/02, adaptação vertical"
+notas = "verificado no arquivo; o efeito em render não foi verificado porque a exportação do stage estoura o tempo limite."
+
+[[evidencia]]
+id = "EV-R02-19"
+classe = "interpretacao"
+fonte = "S-FIG-PRINCIPAL"
+localizador = "EV-R02-03, EV-R02-04, EV-IG-10"
+afirmacao = "`COVERED ≠ REMOVED` funciona assim: a fonte continua tocando por baixo com opacidade 0, então a fala segue contínua enquanto o ambiente ocupa o quadro; a cobertura opaca da V0 foi trocada por gate de opacidade para não perder a camada nem o áudio."
+confianca = "media"
+escopo = "fonte contínua"
+relacionadas = ["EV-R02-03", "EV-R02-04", "EV-IG-10"]
+
+# ---------------------------------------------------------------- REELS/04
+[[evidencia]]
+id = "EV-R04-01"
+classe = "fato-observado"
+fonte = "S-FIG-PRINCIPAL"
+localizador = "página 370:12343"
+afirmacao = "REELS/04 tem stage horizontal 398:2964, stage 4:3 831:6017, stage 9:16 1428:10045, sete frames `TEMP · ... EXPORT TEST` (848:4543 a 853:9259) e seis `TEMP QA · 9:16 · ...` (1430:10831 a 1433:13008)."
+confianca = "alta"
+escopo = "REELS/04"
+
+[[evidencia]]
+id = "EV-R04-02"
+classe = "fato-observado"
+fonte = "S-FIG-PRINCIPAL"
+localizador = "831:6018 `SOURCE VIDEO · CONTINUOUS 00.000→31.667 · REAL TAKE · AUDIO ON · BURNED CAPTIONS TEMP`"
+afirmacao = "a fonte de 31,667 s encolhe para 0,66 e vai pra esquerda em 4,45→5,05 s, sai em 9,39→9,86 s, volta inteira em 27→28,62 s e faz push-in lento de 1 para 1,065 entre 29,08 e 31,42 s."
+confianca = "alta"
+escopo = "REELS/04"
+
+[[evidencia]]
+id = "EV-R04-03"
+classe = "fato-observado"
+fonte = "S-FIG-PRINCIPAL"
+localizador = "831:6321 MEDIA"
+afirmacao = "a mídia são gravações reais da gestão nomeadas pelo papel e por códigos do design system: `S01A · BEFORE STATE · MED-11/18`, `S02 · REGISTRAR COMPRA · T04 TWO ACTIVITIES`, `S03A · COMPRA SALVA + NOVO CUSTO · T03 FULL SCREEN`, `S03B · CUSTO + MARGEM + PREÇO PARADO · PRIMARY EVIDENCE`, `S04 · FICHA + PRECIFICAÇÃO · MIC-04 FOCUS WORKSPACE`, `S05 · CATÁLOGO + ALERTA · MES-10 CONTRACT TO HUMAN`."
+confianca = "alta"
+escopo = "REELS/04"
+
+[[evidencia]]
+id = "EV-R04-04"
+classe = "fato-observado"
+fonte = "S-FIG-PRINCIPAL"
+localizador = "831:6334 S02"
+afirmacao = "em 9,39→9,86 s o modal de registrar compra escala para 2,12 e desloca -684,-112: a câmera mergulha no modal e a tela cheia seguinte nasce de dentro dele."
+confianca = "alta"
+escopo = "REELS/04, transição causal"
+
+[[evidencia]]
+id = "EV-R04-05"
+classe = "fato-observado"
+fonte = "S-FIG-PRINCIPAL"
+localizador = "831:6435 e 831:6581"
+afirmacao = "`S04 · AUTHORIAL SURFACE · SOLID INK` cobre o quadro de 19 a 24,55 s; `S04 · DECISION TEXT · BOOTZY TM · HUMAN CHOICES` traz quatro opções que entram em 18,88, 19,86, 21,04 e 22,62 s, cada uma com um gesto curto diferente (42 px da esquerda, pop 0,84→1,03→1, subida de 50 px, 56 px da direita com 1,08→1); a anterior cai para opacidade 0,82 quando a próxima entra."
+confianca = "alta"
+escopo = "REELS/04, tipografia de decisão"
+
+[[evidencia]]
+id = "EV-R04-06"
+classe = "resultado-verificado"
+fonte = "S-QA-LOCAL"
+localizador = "whisper sobre DceAVGIOUhc x tempos de EV-R04-05"
+afirmacao = "as opções entram na fala: `cobrar mais` dito em 18,86 s e opção 01 em 18,88 s; `mudar` 20,06 e opção 02 19,86; `rever` 21,22 e opção 03 21,04; `aceitar` 23,28 e opção 04 22,62, entrando já em `simplesmente`."
+confianca = "alta"
+escopo = "REELS/04, sincronia"
+
+[[evidencia]]
+id = "EV-R04-07"
+classe = "fato-observado"
+fonte = "S-FIG-PRINCIPAL"
+localizador = "831:6352 S04"
+afirmacao = "a mídia `S04 · FICHA + PRECIFICAÇÃO` faz pans e zoom 1,16 em 19,01, 20,13, 21,29 e 22,92 s, sincronizados com as opções, mas fica inteiramente sob a superfície de tinta sólida nesse intervalo."
+confianca = "alta"
+escopo = "REELS/04"
+
+[[evidencia]]
+id = "EV-R04-08"
+classe = "interpretacao"
+fonte = "S-FIG-PRINCIPAL"
+localizador = "EV-R04-05, EV-R04-07, EV-IG-03"
+afirmacao = "o movimento da ficha sob a tinta é resto de um tratamento anterior em que a decisão aparecia sobre o software; no publicado ele não existe para quem assiste."
+confianca = "baixa"
+escopo = "REELS/04"
+relacionadas = ["EV-R04-05", "EV-R04-07"]
+
+[[evidencia]]
+id = "EV-R04-09"
+classe = "fato-observado"
+fonte = "S-FIG-PRINCIPAL"
+localizador = "831:6763 pointer e 831:6025 Spotify"
+afirmacao = "o `Pointer · REAL macOS 26 · window arranging` arrasta o Spotify entre 5,18 e 6,10 s: o ponteiro anda -170,68 e a janela -149,6,59,84 nos mesmos tempos; depois o ponteiro sai."
+confianca = "alta"
+escopo = "REELS/04, cursor acoplado"
+
+[[evidencia]]
+id = "EV-R04-10"
+classe = "fato-observado"
+fonte = "S-FIG-PRINCIPAL"
+localizador = "831:6020 wallpaper"
+afirmacao = "o wallpaper do desk 4:3 tem keyframe linear de largura 1438→1440 e deslocamento -2 px entre 0 e 11,47 s."
+confianca = "alta"
+escopo = "REELS/04"
+notas = "parece correção de borda; causa não verificada."
+
+[[evidencia]]
+id = "EV-R04-11"
+classe = "fato-observado"
+fonte = "S-FIG-PRINCIPAL"
+localizador = "1428:10045 x 398:2964, camada da fonte"
+afirmacao = "no 9:16 os deslocamentos da fonte são os do horizontal multiplicados por 0,32 (-470 vira -150,4; -560 vira -179,2), com as mesmas escalas e tempos."
+confianca = "alta"
+escopo = "REELS/04, adaptação vertical"
+
+[[evidencia]]
+id = "EV-R04-12"
+classe = "fato-observado"
+fonte = "S-FIG-PRINCIPAL"
+localizador = "848:4543 a 853:9259 e 1430:10831 a 1433:13008"
+afirmacao = "os frames TEMP isolam subárvores para testar exportação (fresh root, root resize, top-level geometry, media, desk, só Spotify, só wallpaper) e camadas do 9:16 (sem desk, só desk, desk+mídia, sem wallpaper, sem Spotify, sem atmosfera)."
+confianca = "alta"
+escopo = "REELS/04, diagnóstico"
+
+[[evidencia]]
+id = "EV-R04-13"
+classe = "fato-observado"
+fonte = "S-FIG-PRINCIPAL"
+localizador = "491:3329 e instâncias no 831:6017"
+afirmacao = "as legendas do 4:3 usam cerca de 80 componentes locais `SOURCE · BOOTZY CAPTION NNN · palavra`, um por palavra, guardados no frame oculto `CAPTION COMPONENT SOURCES · BOOTZY · RENDER-SAFE`; na página sobram textos `EDITABLE CAPTION · ... · TROCAR PARA BOOTZY TM`."
+confianca = "alta"
+escopo = "REELS/04, fontes e render"
+
+[[evidencia]]
+id = "EV-R04-14"
+classe = "fato-observado"
+fonte = "S-IG-C"
+localizador = "frames 0 a 4 s e 19 a 24 s"
+afirmacao = "no publicado o hook empilha `um aumento pequeno / pode comer a sua / margem / antes de você sequer mexer no / preço.` com `margem` e `preço.` maiores e em laranja; na decisão, `aceitar outra margem` é a única opção em laranja."
+confianca = "alta"
+escopo = "REELS/04, hierarquia"
+
+# ---------------------------------------------------------------- REELS/05
+[[evidencia]]
+id = "EV-R05-01"
+classe = "fato-observado"
+fonte = "S-FIG-PRINCIPAL"
+localizador = "página 524:2964"
+afirmacao = "REELS/05 tem `REEL · autoedição · HORIZONTAL · 1920×1080 · 49.1s` (530:2964), `4:3 · 1440×1080 · 49.1s · ADAPTATION` (820:2964) e `9:16 · 1080×1920 · 49.1s · VERTICAL` (1629:2964); timelineDuration 49,1 s."
+confianca = "alta"
+escopo = "REELS/05"
+
+[[evidencia]]
+id = "EV-R05-02"
+classe = "fato-observado"
+fonte = "S-FIG-PRINCIPAL"
+localizador = "820:2964 S02"
+afirmacao = "cada contexto citado na fala ganha um recorte do rosto com forma própria: `TRABALHO · VERTICAL OBJECT`, `FAMÍLIA · NEAR FULL BLEED`, `GRUPO NOVO · LOW LANDSCAPE`, `QUALQUER ESPAÇO · NARROW VERTICAL`, `INTERPRETADO · SMALL VERTICAL COUNTERPOINT`."
+confianca = "alta"
+escopo = "REELS/05, composição"
+
+[[evidencia]]
+id = "EV-R05-03"
+classe = "fato-observado"
+fonte = "S-FIG-PRINCIPAL"
+localizador = "820:2964 S03 e S04"
+afirmacao = "a revisão usa vídeo vivo dentro das letras (`S03 · HERO LIVE FOOTAGE KNOCKOUT · REVISÃO`); a TV é `EXACT SOURCE CLONE · CHASSIS · RECOLOR ONLY` com `LIVE SCREEN · SAME SOURCE · MUTED · EXACT MASK` e `SCREEN GLASS · ORIGINAL REFLECTIONS`."
+confianca = "alta"
+escopo = "REELS/05, fidelidade a referências"
+
+[[evidencia]]
+id = "EV-R05-04"
+classe = "fato-observado"
+fonte = "S-FIG-PRINCIPAL"
+localizador = "798:474 a 798:892 e camadas S04 do 820:2964"
+afirmacao = "26 tweets usam `REAL TWEET TEMPLATE · SF PRO EDITABLE FALLBACK` com conteúdo marcado `FICTIONAL SATIRE` e personas inventadas; entram em grupos `BURST`, `FOREGROUND AVALANCHE` e `THRESHOLD`."
+confianca = "alta"
+escopo = "REELS/05, humor por acúmulo"
+
+[[evidencia]]
+id = "EV-R05-05"
+classe = "fato-observado"
+fonte = "S-FIG-PRINCIPAL"
+localizador = "820:2964, camada da fonte"
+afirmacao = "a fonte se chama `SOURCE · CLEAN · CONTINUOUS · SINGLE VIDEO / AUDIO · NO MASK HACK`; o arquivo de arquivo morto tem `STANDBY · REEL 05 · PROVISIONAL VISUALS · DO NOT EXPORT` e `OLD CAPTION FALLBACKS`."
+confianca = "alta"
+escopo = "REELS/05"
+
+[[evidencia]]
+id = "EV-R05-06"
+classe = "fato-observado"
+fonte = "S-FIG-PRINCIPAL"
+localizador = "820:2964, fontes de texto"
+afirmacao = "fontes no 4:3: Bootzy TM Regular (89 segmentos), SF Pro (tweets), Roboto e Inter; ainda há `CAPTION · EDITABLE · TROCAR PARA BOOTZY` e `BOOTZY REPLACE · S04 · incel / nuance`."
+confianca = "alta"
+escopo = "REELS/05, tipografia"
+
+# ---------------------------------------------------------------- REELS/07
+[[evidencia]]
+id = "EV-R07-01"
+classe = "fato-observado"
+fonte = "S-FIG-PRINCIPAL"
+localizador = "926:3698, 1194:2964, 1194:5604, 1194:8244, 1194:10884, 1395:5529"
+afirmacao = "as cinco versões 4:3 e o TIKTOK têm 813 nós, os mesmos nove vídeos e timelineDuration 59,307 s; não existem camadas de PAUSE INSERTS nem de BASE 47,600."
+confianca = "alta"
+escopo = "REELS/07"
+contradiz = ["EV-PREP-03"]
+
+[[evidencia]]
+id = "EV-R07-02"
+classe = "fato-observado"
+fonte = "S-FIG-PRINCIPAL"
+localizador = "1346:5019, 1335:6351, 1353:5529"
+afirmacao = "a fonte de todas as versões é `SOURCE · TALKING HEAD · FINAL PLAYBACK MASTER MIX · 1080×1920 · SUBJECT-AWARE FILL`; o mesmo vídeo aparece solto como `REELS07_PLAYBACK_MASTER_FINAL_MIX 1` e isolado no frame `QA · FINAL MIX ONLY · TEMP`."
+confianca = "alta"
+escopo = "REELS/07, pipeline"
+
+[[evidencia]]
+id = "EV-R07-03"
+classe = "interpretacao"
+fonte = "S-FIG-PRINCIPAL"
+localizador = "EV-R07-01, EV-R07-02, EV-R07-11"
+afirmacao = "o tempo final passou a ser resolvido fora do Figma: pausas, inserções musicais e áudio foram mixados num master único, e o Figma só sincroniza camadas a esse master."
+confianca = "media"
+escopo = "REELS/07, tempo"
+relacionadas = ["EV-R07-01", "EV-R07-02", "EV-R07-11"]
+
+[[evidencia]]
+id = "EV-R07-04"
+classe = "fato-observado"
+fonte = "S-FIG-PRINCIPAL"
+localizador = "`TEXT · EDITORIAL · OPENING PUNCH · TEMPORAL` em cada versão"
+afirmacao = "as versões diferem no hook em Bootzy: V01 `vocês conhecem os hits da miley. olha o resto.`, V02 `acho que vocês nunca escutaram a miley direito.`, V03 `vocês não fazem ideia do tamanho do catálogo da miley.`, V04 `miley tem muito mais música boa do que vocês conhecem.`, V05 `vocês realmente conhecem o catálogo da miley?`. fora isso, só mudam tempo e amplitude das luzes do wallpaper."
+confianca = "alta"
+escopo = "REELS/07, versões"
+
+[[evidencia]]
+id = "EV-R07-05"
+classe = "fato-observado"
+fonte = "S-FIG-PRINCIPAL"
+localizador = "1395:5529"
+afirmacao = "o TIKTOK, criado depois das versões (ids 1395 contra 1194), usa o texto da V01."
+confianca = "alta"
+escopo = "REELS/07"
+
+[[evidencia]]
+id = "EV-R07-06"
+classe = "interpretacao"
+fonte = "S-FIG-PRINCIPAL"
+localizador = "EV-R07-05"
+afirmacao = "a V01 é a candidata mais provável a hook escolhido."
+confianca = "baixa"
+escopo = "REELS/07"
+relacionadas = ["EV-R07-05"]
+
+[[evidencia]]
+id = "EV-R07-07"
+classe = "fato-observado"
+fonte = "S-FIG-PRINCIPAL"
+localizador = "1194:10977 `WINDOW · TALKING HEAD · RESPONSIVE · macOS 26 · REAL`"
+afirmacao = "a janela do talking head muda largura e altura a cada beat (880x1030, 820x900, 760x780 ... 1100x820 em 25,49 s) e o fill `SUBJECT-AWARE` acompanha com deslocamento vertical para manter o rosto; quando uma janela de música é protagonista, a pessoa encolhe para 0,89."
+confianca = "alta"
+escopo = "REELS/07, composição"
+
+[[evidencia]]
+id = "EV-R07-08"
+classe = "fato-observado"
+fonte = "S-FIG-PRINCIPAL"
+localizador = "camadas `EPHEMERA · KIT · ...` e `WINDOW/SPOTIFY · ...` do 1194:10884 x nomes `CAPTION · NNN`"
+afirmacao = "cada música entra no tempo do nome dito, com um objeto efêmero próprio e uma superfície real: river 8,51 s (microfone de glitter, janela), walk of fame 10,98 (estrela prata), night crawling 16,68 (coração vermelho, Spotify), something beautiful 21,31 (disco iridescente), high 28,14 (chapéu de cowboy verde, Spotify), 1 sun 35,38 (sol dourado), reborn 40,33 (globo espelhado), bass persuades 48,88 a 49,62, callback something beautiful 55,56 (selo de cera)."
+confianca = "alta"
+escopo = "REELS/07, sincronia e objetos"
+
+[[evidencia]]
+id = "EV-R07-09"
+classe = "fato-observado"
+fonte = "S-FIG-PRINCIPAL"
+localizador = "1194:11046 `CURSOR · SYSTEM ARROW · SEMANTIC WINDOW DRAGS`"
+afirmacao = "o cursor só existe em 0,56 a 1,5, 9,65 a 11,55, 48,96 a 49,92 e 55,28 a 56,08 s, sempre arrastando uma janela que acompanha o mesmo caminho; o clique é escala 0,92."
+confianca = "alta"
+escopo = "REELS/07, cursor semântico"
+
+[[evidencia]]
+id = "EV-R07-10"
+classe = "fato-observado"
+fonte = "S-FIG-PRINCIPAL"
+localizador = "1194:11047 e 1194:11052 `MEDIA · COLLABS · PHOTO AVALANCHE`"
+afirmacao = "12 fotos de parcerias entram em corte seco a cada ~0,15 s entre 44,97 e 46,8 s, enquanto a fala diz `isso sem eu nem entrar no assunto de com quem essa mulher já trabalhou` (43,567 a 47,247 s)."
+confianca = "alta"
+escopo = "REELS/07, humor literal"
+
+[[evidencia]]
+id = "EV-R07-11"
+classe = "resultado-verificado"
+fonte = "S-FIG-EXPORT"
+localizador = "export_video de 1353:5529, low, 5 fps, 0,25x; blackdetect e contact sheet"
+afirmacao = "o master final tem 59,307 s de áudio e imagem contínua até o fim: nenhum preto na área do vídeo, rosto visível em todos os frames amostrados a cada 2 s, inclusive depois de 47,7 s."
+confianca = "alta"
+escopo = "REELS/07, playback"
+notas = "verifica o master, não o composite do stage: a exportação do stage estoura o tempo limite."
+
+[[evidencia]]
+id = "EV-R07-12"
+classe = "resultado-verificado"
+fonte = "S-QA-LOCAL"
+localizador = "astats por trecho no export de 1353:5529"
+afirmacao = "no master, a fala tem RMS entre -31,7 e -35,8 dB (picos -15 a -20) e os trechos musicais inseridos entre as falas têm RMS entre -20 e -24 dB (picos -8,8 a -12,7): a música fica 10 a 13 dB acima da voz."
+confianca = "media"
+escopo = "REELS/07, mix"
+notas = "medido num export de baixa qualidade; o ganho absoluto do export é desconhecido, a diferença relativa é do master."
+
+[[evidencia]]
+id = "EV-R07-13"
+classe = "fato-observado"
+fonte = "S-FIG-PRINCIPAL"
+localizador = "1395:5529 x 1194:10884"
+afirmacao = "o TIKTOK recompõe: talking head 840x1560 com larguras, alturas e trajetórias próprias, janelas de música na metade de baixo com 1050 a 1250 de largura sangrando a borda, efêmeras reposicionadas."
+confianca = "alta"
+escopo = "REELS/07, adaptação vertical"
+
+[[evidencia]]
+id = "EV-R07-14"
+classe = "fato-observado"
+fonte = "S-FIG-PRINCIPAL"
+localizador = "`TEXT · EDITORIAL · OPENING PUNCH` x captions"
+afirmacao = "o hook escrito não repete a fala: a fala diz `com essa nova era da miley chegando eu fui mexer no catálogo dela de novo`; o hook é uma pergunta ou afirmação de manchete."
+confianca = "alta"
+escopo = "REELS/07, texto editorial"
+
+# ---------------------------------------------------------------- REELS/08
+[[evidencia]]
+id = "EV-R08-01"
+classe = "fato-observado"
+fonte = "S-FIG-PRINCIPAL"
+localizador = "1472:2964 `BASS PERSUADES · KINETIC TYPOGRAPHY · 1440×1080 · TEMPORAL`"
+afirmacao = "a versão cinética usa nós de texto em Boogaloo (105 a 430 px), uma palavra por vez; quase todas entram com rotação de -35° a +35°, translação de 300 a 760 px, escala de 0,2 a 0,65 até 1 com spring e muitas terminam crescendo até 1,15 a 2,35."
+confianca = "alta"
+escopo = "REELS/08"
+
+[[evidencia]]
+id = "EV-R08-02"
+classe = "fato-observado"
+fonte = "S-FIG-PRINCIPAL"
+localizador = "1484:9576 `V3 · CHOREOGRAPHY` e 1484:9361 glyph bank"
+afirmacao = "dentro do mesmo frame há uma V3 com glifos Bootzy e camadas nomeadas por função compositiva: `pin`, `left mass`, `right collision`, `low band`, `viewport breaker`, `whisper`, `ceiling crop`, `left wall`, `small counterpoint`, `vertical hinge`, `slab`, `vertical blade`, `micro hinge`, `per-letter collision`."
+confianca = "alta"
+escopo = "REELS/08"
+
+[[evidencia]]
+id = "EV-R08-03"
+classe = "fato-observado"
+fonte = "S-FIG-PRINCIPAL"
+localizador = "1481:2964 `BASS PERSUADES · REBUILD · 9:16`"
+afirmacao = "o rebuild vertical usa glifos Bootzy vetoriais e cenas por trecho da letra com camadas como `micro parasite`, `edge parasite`, `tiny before impact`, `abstract bass body`, `right spine`, `lower counterweight`, `BASS-SHOVED CLUSTER`, `giant right crop`, `left anchor`, `paired counterpoint`, `stretch wipe`, `main slab`, `two-sided assembly`, `mirrored collision`; parasites, spines 2 a 6 e as seis `diagonal wave` estão ocultos."
+confianca = "alta"
+escopo = "REELS/08"
+
+[[evidencia]]
+id = "EV-R08-04"
+classe = "interpretacao"
+fonte = "S-FIG-PRINCIPAL"
+localizador = "EV-R08-01, EV-R08-02, EV-R08-03, EV-PREP-04"
+afirmacao = "a sequência cinética, V3 e rebuild mostra a troca de um vocabulário de efeitos (girar, voar, crescer) por um vocabulário de composição (escala, recorte, borda, contrapeso, vazio), com redução visível por camadas ocultas."
+confianca = "media"
+escopo = "REELS/08"
+relacionadas = ["EV-R08-01", "EV-R08-02", "EV-R08-03", "EV-PREP-04"]
+
+[[evidencia]]
+id = "EV-R08-05"
+classe = "fato-observado"
+fonte = "S-FIG-PRINCIPAL"
+localizador = "página 1438:2964 `reels descartado`"
+afirmacao = "a página descartado guarda `BASS PERSUADES · REEL · 1080×1920 · 7.68s · FINAL` (1450:3599) e duas `REFERENCE DE-PARA` (V2 e `V3 LITERAL`, 1320x968), além de frames de gravação de tela com versões `[Vectorized]` de milhares de nós."
+confianca = "alta"
+escopo = "REELS/08, genealogia"
+
+[[evidencia]]
+id = "EV-R08-06"
+classe = "fato-observado"
+fonte = "S-FIG-PRINCIPAL"
+localizador = "1536:2964 e 1776:2964, 1782:3035"
+afirmacao = "os estudos por música guardam camadas antigas ocultas (`PHRASE · ...`) ao lado de `V2 · ...` e `V3 · ...`, uma referência oculta `SOURCE · ... official recording · song-time`, e um frame `__QA SNAPSHOTS__` com 8 capturas em intervalos iguais (por exemplo 0,48, 2,04 ... 11,40 s)."
+confianca = "alta"
+escopo = "REELS/08, processo"
+
+[[evidencia]]
+id = "EV-R08-07"
+classe = "fato-observado"
+fonte = "S-FIG-PRINCIPAL"
+localizador = "screenshot de 1776:2964 e 1782:3035"
+afirmacao = "os snapshots mostram Bootzy minúscula: uma linha de leitura pequena no topo com a letra corrida, uma palavra gigante cortada pela borda (`cen`, `compe`, `asures`, `your t`), letras empilhadas em coluna (`t i m e`), repetição com um acento de cor (compete x5, um vermelho) e campo de cor por trecho."
+confianca = "alta"
+escopo = "REELS/08, linguagem"
+
+[[evidencia]]
+id = "EV-R08-08"
+classe = "resultado-verificado"
+fonte = "S-FIG-PRINCIPAL"
+localizador = "recorte ampliado do snapshot de 1776:2964"
+afirmacao = "numa miniatura pareceu faltar o i (`nto`, `sidelnes`); o recorte ampliado mostra `into` correto, porque o i da Bootzy é muito estreito."
+confianca = "alta"
+escopo = "QA visual"
+
+[[evidencia]]
+id = "EV-R08-09"
+classe = "fato-observado"
+fonte = "S-FIG-PRINCIPAL"
+localizador = "1598:2964 e 1608:2964"
+afirmacao = "existem bancos ocultos `BOOTZY TM · PUNCTUATION OUTLINES` e `BOOTZY TM · REAL ACCENTED GLYPHS`."
+confianca = "alta"
+escopo = "tipografia e render"
+
+# ---------------------------------------------------------------- REELS/09
+[[evidencia]]
+id = "EV-R09-01"
+classe = "fato-observado"
+fonte = "S-FIG-PRINCIPAL"
+localizador = "1870:2964 `REELS/09 · FINAL · 1080×1920 · 9:16 · TEMPORAL STAGE`"
+afirmacao = "stage vertical nativo com timelineDuration 93,35 s e fonte `SOURCE · TALKING HEAD · MASTER · CONTINUOUS 0–93.3`; nenhuma camada de legenda."
+confianca = "alta"
+escopo = "REELS/09"
+
+[[evidencia]]
+id = "EV-R09-02"
+classe = "fato-observado"
+fonte = "S-FIG-PRINCIPAL"
+localizador = "nós de texto do 1870:2964"
+afirmacao = "tipografia em Bricolage Grotesque ExtraBold e Bold e Instrument Sans SemiBold; nenhuma ocorrência de Bootzy."
+confianca = "alta"
+escopo = "REELS/09, tipografia"
+
+[[evidencia]]
+id = "EV-R09-03"
+classe = "fato-observado"
+fonte = "S-FIG-PRINCIPAL"
+localizador = "1870:2966, 1870:3012, 1870:3814"
+afirmacao = "as palavras entram em corte seco com rotação de -5° a +4° até 0 e escala não uniforme (0,72 x 0,34 ou 0,62 x 1,25) passando por 1,06 x 1,12 até 1 em ~0,22 s; saem em corte."
+confianca = "alta"
+escopo = "REELS/09, motion"
+
+[[evidencia]]
+id = "EV-R09-04"
+classe = "fato-observado"
+fonte = "S-FIG-PRINCIPAL"
+localizador = "camadas `FIELD · ...`"
+afirmacao = "cada bloco do jogo tem campo de cor chapado trocado em corte: coral #f36c52 (produto, 5,94 s), tinta #2b1715 (arquitetura, 13,98), creme #f9efe6 (peruca, 30,49), rosa #db6f88 (quem, 40,26), tinta (qual, 48,16), branco #fcfcfc (duas, 57,14), coral (legenda, 67,02), vinho #b72e3a (missão, 74,06), tinta (convite, 90,62)."
+confianca = "alta"
+escopo = "REELS/09, cor"
+
+[[evidencia]]
+id = "EV-R09-05"
+classe = "fato-observado"
+fonte = "S-FIG-PRINCIPAL"
+localizador = "camadas de mídia do 1870:2964"
+afirmacao = "as telas do jogo aparecem como recortes monumentais sangrando (`ENTRY · MONUMENTAL`, `CHARACTER · MONUMENTAL`), uma superfície por vez (`PLAYER/HOST/TV/SCORE · TAKEOVER`) e depois lado a lado (`ARCH SUMMARY`); `PERUCA · REVEAL MASK` abre de 250 para 870 de largura; `QUAL · MAJORITY BAR` cresce de 120 para 860."
+confianca = "alta"
+escopo = "REELS/09, mecânicas"
+
+[[evidencia]]
+id = "EV-R09-06"
+classe = "fato-observado"
+fonte = "S-FIG-PRINCIPAL"
+localizador = "textos ordenados por tempo"
+afirmacao = "a partir de 79,52 s o vídeo volta ao rosto só com palavras-chave da confissão (`eu fui um pouquinho ganancioso ... acabou não dando tempo de finalizar. mas eu gostei tanto da ideia`) antes do convite final."
+confianca = "alta"
+escopo = "REELS/09, narrativa"
+
+[[evidencia]]
+id = "EV-R09-07"
+classe = "interpretacao"
+fonte = "S-FIG-PRINCIPAL"
+localizador = "EV-R09-01, EV-R09-05, EV-PREP-05"
+afirmacao = "o estado atual não tem placas de legenda nem telas dentro de cartões; o texto editorial faz o papel da legenda e as telas viram recortes. isso é coerente com a rejeição relatada de caption plates e cards, sem prova de que a versão atual foi aprovada."
+confianca = "media"
+escopo = "REELS/09"
+relacionadas = ["EV-R09-01", "EV-R09-05", "EV-PREP-05"]
+
+# ---------------------------------------------------------------- outros trabalhos
+[[evidencia]]
+id = "EV-R03-01"
+classe = "fato-observado"
+fonte = "S-FIG-PRINCIPAL"
+localizador = "389:3334 e 816:4772; export de 389:3334"
+afirmacao = "REELS/03 (6,12 s, sem fala) reconstrói o Figma UI3 com ícones e componentes do kit UI3; páginas do arquivo fictício se chamam `wake up darling`, `eu tava quieto`, `autoestima FINAL 4`; no canvas, `acima de mim só os helicópteros da polícia.` e `ninguém nesse mundo vai me convencer a me sentir menor.` com stickers pequenos."
+confianca = "alta"
+escopo = "REELS/03"
+
+[[evidencia]]
+id = "EV-R03-02"
+classe = "fato-observado"
+fonte = "S-FIG-PRINCIPAL"
+localizador = "816:4772"
+afirmacao = "a versão 1080x1920 troca as sidebars por `design.pill.left` e `design.pill.right`, o estado recolhido do próprio UI3."
+confianca = "alta"
+escopo = "REELS/03, adaptação vertical"
+
+[[evidencia]]
+id = "EV-R06-01"
+classe = "fato-observado"
+fonte = "S-FIG-EXPORT"
+localizador = "export de 860:2968 e página 856:3068"
+afirmacao = "REEL 06 (8,83 s, sem áudio) parte da foto real de uma mesa com prato vazio; fotos da festa de tomates se acumulam sobre o prato e terminam como confete de recortes; há dez variações `VAR 01..10`."
+confianca = "alta"
+escopo = "REEL 06"
+
+[[evidencia]]
+id = "EV-R10-01"
+classe = "fato-observado"
+fonte = "S-FIG-PRINCIPAL"
+localizador = "1951:2964 texto `v02 · princípios`"
+afirmacao = "a série do REELS/10 registra no canvas: `sem imagens · tipografia + cor + motion + composição + timing`, gramática `entradas curtas de 18–22px → pequeno overshoot → assentamento · hard cuts cromáticos · holds longos · escala muda por estado, não por zoom` e `a direção modular v01 permanece intacta como histórico`."
+confianca = "alta"
+escopo = "REELS/10"
+
+[[evidencia]]
+id = "EV-R10-02"
+classe = "fato-observado"
+fonte = "S-FIG-PRINCIPAL"
+localizador = "2014:2964"
+afirmacao = "a expansão se chama `direção individual · v02.2` com nota `revisão manual reel por reel`, e a fonte do piloto é Barlow Condensed Black."
+confianca = "alta"
+escopo = "REELS/10"
+
+[[evidencia]]
+id = "EV-PIL-01"
+classe = "fato-observado"
+fonte = "S-FIG-PRINCIPAL"
+localizador = "página 35:30"
+afirmacao = "os pilotos `fd:` montam stages por papel: `win:spotify [focused]`, `win:portfolio [supporting]`, `hero-window`, `support-window`, efêmeras `depth-anchor` e `semantic-link`, cursor, dock e menubar."
+confianca = "alta"
+escopo = "pilotos"
+
+[[evidencia]]
+id = "EV-CRONO-01"
+classe = "interpretacao"
+fonte = "S-FIG-PRINCIPAL"
+localizador = "ids das páginas e stages + datas de publicação"
+afirmacao = "ordem provável de trabalho pelos ids crescentes: pilotos (35), REELS/02 (182), 03 (326), 04 (370), 05 (524), adaptações 4:3 do 05 e do 04 (820, 831), 06 (856), 07 (926, versões 1194), 07 vertical (1395), verticais do 04 (1428) e do 02 (1638), descartado (1438), 08 (1464), 09 (1810), 10 (1882). as adaptações 4:3 nasceram entre a publicação do 02 em 16:9 (15/08) e a do 05 em 4:3 (23/08)."
+confianca = "media"
+escopo = "cronologia"
+relacionadas = ["EV-IG-01", "EV-IG-02", "EV-IG-03"]
+
+# ---------------------------------------------------------------- bibliotecas e design system
+[[evidencia]]
+id = "EV-LIB-01"
+classe = "fato-observado"
+fonte = "S-FIG-PRINCIPAL"
+localizador = "get_libraries"
+afirmacao = "14 bibliotecas vinculadas: design system, ephemera kit, apple legacy, social interfaces, media players, UI3, windows 95 e as comunitárias Material 3, Simple Design System, iOS 18, iOS 26, watchOS 26, visionOS 26 e macOS 26."
+confianca = "alta"
+escopo = "bibliotecas"
+
+[[evidencia]]
+id = "EV-LIB-02"
+classe = "fato-observado"
+fonte = "S-FIG-PRINCIPAL"
+localizador = "instâncias top-level de 188:2964, 831:6017, 820:2964, 1194:10884, 1870:2964 cruzadas com as chaves das bibliotecas"
+afirmacao = "uso verificado: macOS 26 (wallpaper, dock, janelas, controles, ponteiro) no 02, 04 e 07; ephemera kit no 02 e 04; media players (Spotify sidebar, top bar, artwork e image slots) no 04 e 07; design system (Media/Slot e Narrative) no 02, 04, 05 e 07; UI3 no 03. nenhuma instância de social interfaces, apple legacy ou windows 95 nesses stages."
+confianca = "alta"
+escopo = "bibliotecas"
+
+[[evidencia]]
+id = "EV-LIB-03"
+classe = "fato-observado"
+fonte = "S-FIG-EPHEMERA"
+localizador = "página assets"
+afirmacao = "o ephemera kit tem 75 componentes em seis famílias: 3d-decorative-charms (18), digital-scrapbook-embellishments (24), y2k-digital-ephemera (8), 3d-glossy-sticker (8), girly-digital-ephemera (12), star-scatter (5)."
+confianca = "alta"
+escopo = "bibliotecas"
+
+[[evidencia]]
+id = "EV-LIB-04"
+classe = "fato-observado"
+fonte = "S-FIG-PRINCIPAL"
+localizador = "1194:10884 efêmeras do REELS/07"
+afirmacao = "no REELS/07 as efêmeras por música são retângulos com image fill, não instâncias do kit."
+confianca = "alta"
+escopo = "bibliotecas"
+
+[[evidencia]]
+id = "EV-DS-01"
+classe = "fato-observado"
+fonte = "S-FIG-DS"
+localizador = "páginas do arquivo"
+afirmacao = "o design system tem catálogo de motion (MIC-01..10, MES-01..20, MAC-01..15, TIM-01..10), humor (HUM-01..20), padrões de mídia (MED-01..35), 25 templates 16:9 e 25 templates 9:16, componentes Narrative, Media/Slot e Connector; as páginas de foundations, tipografia, exemplos e documentação estão vazias."
+confianca = "alta"
+escopo = "design system"
+
+[[evidencia]]
+id = "EV-DS-02"
+classe = "fato-observado"
+fonte = "S-FIG-DS"
+localizador = "descrição de `Motion/Meso/MES-12` e `Motion/Timing/TIM-10`"
+afirmacao = "cada padrão traz uma descrição estruturada `AI_MOTION_PATTERN v1` com intenção, gatilho, estados, tokens de duração e easing, contrato de camadas, templates compatíveis, âncora de voz, regras por formato, fallback, use_when e avoid_when."
+confianca = "alta"
+escopo = "design system"
+
+[[evidencia]]
+id = "EV-DS-03"
+classe = "interpretacao"
+fonte = "S-FIG-PRINCIPAL"
+localizador = "EV-R04-03, EV-R07-01, EV-R10-01, EV-R10-02"
+afirmacao = "o catálogo foi usado como vocabulário no REELS/04 e deixou de aparecer nos nomes do 07, 08 e 09; no 10 a passagem de `direção modular` para `direção individual` está escrita no canvas."
+confianca = "media"
+escopo = "evolução do sistema"
+relacionadas = ["EV-R04-03", "EV-R10-01", "EV-R10-02", "EV-DS-01"]
+
+# ---------------------------------------------------------------- engenharia e limites
+[[evidencia]]
+id = "EV-ENG-01"
+classe = "resultado-verificado"
+fonte = "S-FIG-EXPORT"
+localizador = "export_video de 188:2964, 1194:10884 e 860:2968"
+afirmacao = "a exportação via MCP estoura 60 s nos stages de 35,9 s e 59,3 s mesmo em 5 fps e 0,25x; frames de 6 a 9 s exportam em segundos."
+confianca = "alta"
+escopo = "ferramentas"
+
+[[evidencia]]
+id = "EV-ENG-02"
+classe = "fato-observado"
+fonte = "S-FIG-PRINCIPAL"
+localizador = "manualKeyframeTracks em todos os stages"
+afirmacao = "as animações são keyframes manuais por propriedade (OPACITY, TRANSLATION_XY, SCALE_XY, ROTATION, WIDTH, HEIGHT) com easing HOLD, EASE_OUT (0,0,0.58,1), EASE_IN_AND_OUT, cúbicas customizadas e spring; HOLD é usado para cortes secos."
+confianca = "alta"
+escopo = "engenharia Figma"
+
+[[evidencia]]
+id = "EV-ENG-03"
+classe = "resultado-verificado"
+fonte = "S-QA-LOCAL"
+localizador = "ffprobe do master citado (S-PREP) x Figma x Instagram"
+afirmacao = "durações do REELS/04: fonte no Figma 31,667 s (950 frames), MP4 citado 31,744 s, publicado 31,733 s de vídeo e 31,743 s de áudio. a diferença é de cerca de 2 frames e não aparece como defeito visível."
+confianca = "media"
+escopo = "tempo"
+relacionadas = ["EV-PREP-02", "EV-R04-02", "EV-IG-03"]
+
+[[evidencia]]
+id = "EV-ENG-04"
+classe = "hipotese"
+fonte = "S-QA-LOCAL"
+localizador = "EV-IG-01"
+afirmacao = "o REELS/02 publicado tem 1916x1078 em vez de 1920x1080; a causa (export, conversão ou plataforma) não foi identificada."
+confianca = "baixa"
+escopo = "render"
+
+# ---------------------------------------------------------------- decisões novas da reconstrução
+[[evidencia]]
+id = "EV-NOVA-01"
+classe = "decisao-nova"
+fonte = "S-PEDIDO"
+localizador = "reconstrução 2026-11"
+afirmacao = "o princípio do ambiente fica reformulado como: o ambiente é o lugar onde o assunto acontece; quando o argumento sai desse lugar, o quadro sai junto."
+confianca = "media"
+escopo = "sistema"
+relacionadas = ["EV-R02-11", "EV-R04-05", "EV-R09-02", "EV-R03-01"]
+
+[[evidencia]]
+id = "EV-NOVA-02"
+classe = "decisao-nova"
+fonte = "S-PEDIDO"
+localizador = "reconstrução 2026-11"
+afirmacao = "toda adaptação de formato passa por checagem de limites: nenhum elemento ativo pode ficar fora do quadro em nenhum beat, e cada beat é recomposto antes de ser escalado."
+confianca = "media"
+escopo = "formatos"
+relacionadas = ["EV-R02-18", "EV-R04-11", "EV-R07-13", "EV-R03-02"]
+
+[[evidencia]]
+id = "EV-NOVA-03"
+classe = "decisao-nova"
+fonte = "S-PEDIDO"
+localizador = "reconstrução 2026-11"
+afirmacao = "todo master de áudio com inserções musicais passa por medição de nível fala x música antes do render final."
+confianca = "media"
+escopo = "áudio"
+relacionadas = ["EV-R07-12"]
+
+[[evidencia]]
+id = "EV-R07-15"
+classe = "resultado-verificado"
+fonte = "S-QA-LOCAL"
+localizador = "tools/render_qa.py sobre o export de 1353:5529 (freezedetect 1 s)"
+afirmacao = "a imagem do master congela em 9,0 a 11,0, 12,8 a 15,4, 18,2 a 20,0, 22,6 a 25,8, 36,6 a 38,4 e 41,2 a 43,8 s, os mesmos trechos em que a fala para e entra música. as pausas viraram quadro congelado da fonte com música por cima, dentro do master."
+confianca = "alta"
+escopo = "REELS/07, tempo"
+relacionadas = ["EV-R07-11", "EV-R07-12"]
+notas = "export a 5 fps: bordas dos intervalos com precisão de 0,2 s. soma dos congelamentos ligados à música ≈ 14 s, compatível com os 13,05 s do relato."
+
+[[evidencia]]
+id = "EV-ENG-05"
+classe = "resultado-verificado"
+fonte = "S-FIG-EXPORT"
+localizador = "ffprobe do export de 1353:5529"
+afirmacao = "no export a 5 fps a trilha de vídeo tem 59,6 s e a de áudio 59,307 s; a sobra de vídeo é arredondamento de quadro do próprio export, não conteúdo."
+confianca = "media"
+escopo = "ferramentas"

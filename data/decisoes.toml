@@ -1,0 +1,182 @@
+# decisões de direção e de engenharia.
+# origem: "recuperada" (existe no trabalho anterior) ou "nova" (proposta nesta reconstrução).
+# aprovação separada em três níveis, porque aprovar a direção não é aprovar a implementação, e nenhum dos dois prova o resultado:
+#   direcao / implementacao / resultado = "verificada" | "publicada" | "nao-verificavel" | "pendente" | "nao-se-aplica"
+#   "publicada" quer dizer que o resultado foi ao ar; não quer dizer que todo detalhe foi considerado bom.
+#   "nao-verificavel" quer dizer que a aprovação, se existiu, estava nas conversas, que não foram acessadas.
+
+[[decisao]]
+id = "DEC-01"
+enunciado = "a fala é o relógio: legendas palavra por palavra com tempos de SRT revisado são a fonte de verdade da timeline, e eventos visuais caem em palavras."
+origem = "recuperada"
+direcao = "nao-verificavel"
+implementacao = "verificada"
+resultado = "publicada"
+evidencias = ["EV-R02-08", "EV-R02-10", "EV-R02-15", "EV-R04-06", "EV-R07-08"]
+escopo = "edições faladas"
+limites = "em edição musical o relógio é a faixa (seções, batidas, letra). em vídeo sem fala, o ritmo vem da imagem ou da música."
+
+[[decisao]]
+id = "DEC-02"
+enunciado = "a fonte falada é contínua e nunca cortada; quando o ambiente cobre a pessoa, a fonte fica por baixo com opacidade 0 (covered não é removed)."
+origem = "recuperada"
+direcao = "nao-verificavel"
+implementacao = "verificada"
+resultado = "publicada"
+evidencias = ["EV-R02-03", "EV-R02-04", "EV-R02-19", "EV-IG-10", "EV-R04-02"]
+escopo = "talking head com cobertura"
+limites = "se o vídeo precisa de pausas ou inserções que alongam o tempo, a continuidade passa a ser responsabilidade de um master mixado (DEC-08)."
+
+[[decisao]]
+id = "DEC-03"
+enunciado = "o ambiente é real quando o assunto é um ambiente real: componentes do sistema, apps e gravações de verdade; interface inventada ou genérica sai."
+origem = "recuperada"
+direcao = "nao-verificavel"
+implementacao = "verificada"
+resultado = "publicada"
+evidencias = ["EV-R02-06", "EV-R02-07", "EV-R02-12", "EV-R02-14", "EV-R04-03", "EV-R05-03"]
+escopo = "edições sobre software, apps, referências culturais"
+limites = "não obriga desktop. em música, jogo, festa ou conteúdo pessoal o ambiente é outro (ver docs/metodo/ambiente.md)."
+
+[[decisao]]
+id = "DEC-04"
+enunciado = "o cursor só existe para executar ações do sistema (clicar, arrastar, minimizar) e o objeto acompanha o cursor."
+origem = "recuperada"
+direcao = "nao-verificavel"
+implementacao = "verificada"
+resultado = "publicada"
+evidencias = ["EV-R02-05", "EV-R02-07", "EV-R04-09", "EV-R07-09"]
+escopo = "interfaces"
+limites = "um cursor desnecessariamente preciso pode virar piada; aí a desnecessidade é o assunto e precisa ser legível."
+
+[[decisao]]
+id = "DEC-05"
+enunciado = "texto editorial entra pequeno e no tempo da fala (subida curta, opacidade, assentamento) em vez de voar pelo quadro."
+origem = "recuperada"
+direcao = "nao-verificavel"
+implementacao = "verificada"
+resultado = "publicada"
+evidencias = ["EV-R02-09", "EV-R02-10", "EV-R04-05", "EV-R10-01"]
+escopo = "tipografia em edições faladas"
+limites = "edições de jogo ou música podem pedir gesto físico maior (EV-R09-03); o critério é a relação com o objeto, não a amplitude."
+
+[[decisao]]
+id = "DEC-06"
+enunciado = "quando o argumento deixa o software (abstração, decisão humana), o ambiente sai do quadro e entra uma superfície autoral: teal no REELS/02, tinta sólida no REELS/04."
+origem = "recuperada"
+direcao = "nao-verificavel"
+implementacao = "verificada"
+resultado = "publicada"
+evidencias = ["EV-R02-11", "EV-R04-05", "EV-IG-06"]
+escopo = "transições de ambiente"
+limites = "a superfície precisa voltar para a pessoa ou para a evidência; não é fundo decorativo."
+
+[[decisao]]
+id = "DEC-07"
+enunciado = "Bootzy TM entra como glifo vetorial ou componente render-safe, nunca como fonte viva no render."
+origem = "recuperada"
+direcao = "nao-verificavel"
+implementacao = "verificada"
+resultado = "publicada"
+evidencias = ["EV-R02-15", "EV-R04-13", "EV-R08-09", "EV-R05-06"]
+escopo = "Bootzy TM e fontes proprietárias"
+limites = "acentos e pontuação precisam de banco próprio; vetorização exige QA de espaçamento."
+
+[[decisao]]
+id = "DEC-08"
+enunciado = "quando o tempo final tem pausas e inserções, o áudio e as pausas são resolvidos num master único fora do Figma, testado isolado antes do composite."
+origem = "recuperada"
+direcao = "nao-verificavel"
+implementacao = "verificada"
+resultado = "pendente"
+evidencias = ["EV-R07-01", "EV-R07-02", "EV-R07-03", "EV-R07-11"]
+escopo = "tempo e playback"
+limites = "o master resolve continuidade, não resolve mix: ver DEC-14."
+
+[[decisao]]
+id = "DEC-09"
+enunciado = "as versões de um mesmo reel exploram o hook escrito mantendo o resto fixo."
+origem = "recuperada"
+direcao = "nao-verificavel"
+implementacao = "verificada"
+resultado = "pendente"
+evidencias = ["EV-R07-04", "EV-R07-05", "EV-R07-06"]
+escopo = "REELS/07"
+limites = "não há evidência de qual hook foi aprovado."
+
+[[decisao]]
+id = "DEC-10"
+enunciado = "na coreografia musical, função compositiva (escala, recorte, borda, contrapeso, vazio) substitui efeito de movimento (girar, voar, crescer)."
+origem = "recuperada"
+direcao = "nao-verificavel"
+implementacao = "verificada"
+resultado = "pendente"
+evidencias = ["EV-R08-01", "EV-R08-02", "EV-R08-03", "EV-R08-04", "EV-PREP-04"]
+escopo = "edições musicais e tipográficas"
+limites = "nenhum estudo do REELS/08 foi publicado. a direção está no arquivo; o resultado não foi validado em render."
+
+[[decisao]]
+id = "DEC-11"
+enunciado = "em edição sobre um objeto com identidade própria (o jogo do REELS/09), tipografia e cor vêm do objeto, não da assinatura do mayco."
+origem = "recuperada"
+direcao = "nao-verificavel"
+implementacao = "verificada"
+resultado = "pendente"
+evidencias = ["EV-R09-02", "EV-R09-04"]
+escopo = "tipografia e cor"
+limites = "não publicado. não confirma se a escolha foi aprovada; confirma que o sistema já operou sem Bootzy."
+
+[[decisao]]
+id = "DEC-12"
+enunciado = "adaptação de formato recompõe por beat e, quando possível, usa estados nativos do ambiente (painéis recolhidos, janelas empilhadas) em vez de escalar keyframes."
+origem = "recuperada"
+direcao = "nao-verificavel"
+implementacao = "verificada"
+resultado = "pendente"
+evidencias = ["EV-R02-17", "EV-R03-02", "EV-R07-13", "EV-R04-11"]
+escopo = "formatos"
+limites = "o REELS/04 vertical escala keyframes por 0,32; nenhum vertical foi publicado entre os três reels encontrados."
+
+[[decisao]]
+id = "DEC-13"
+enunciado = "nome FINAL em camada ou frame não é aprovação; aprovação é publicação ou registro explícito do usuário."
+origem = "nova"
+direcao = "nao-se-aplica"
+implementacao = "nao-se-aplica"
+resultado = "nao-se-aplica"
+evidencias = ["EV-R08-05", "EV-R09-01"]
+escopo = "processo"
+limites = "publicação também não prova que todo detalhe foi aprovado."
+
+[[decisao]]
+id = "DEC-14"
+enunciado = "todo master com música inserida passa por medição de nível de fala x música antes do render; diferença grande precisa ser intencional e anotada."
+origem = "nova"
+direcao = "nao-se-aplica"
+implementacao = "pendente"
+resultado = "nao-se-aplica"
+evidencias = ["EV-R07-12", "EV-NOVA-03"]
+escopo = "áudio"
+limites = "o valor de referência depende da peça; o repositório não fixa um alvo universal."
+
+[[decisao]]
+id = "DEC-15"
+enunciado = "toda adaptação de formato passa por checagem automática de limites de camada por beat."
+origem = "nova"
+direcao = "nao-se-aplica"
+implementacao = "pendente"
+resultado = "nao-se-aplica"
+evidencias = ["EV-R02-18", "EV-NOVA-02"]
+escopo = "formatos"
+limites = "a checagem pega elemento fora do quadro, não pega composição ruim."
+
+[[decisao]]
+id = "DEC-16"
+enunciado = "o princípio do ambiente fica: o ambiente é o lugar onde o assunto acontece, e sai do quadro quando o argumento sai desse lugar."
+origem = "nova"
+direcao = "nao-se-aplica"
+implementacao = "nao-se-aplica"
+resultado = "nao-se-aplica"
+evidencias = ["EV-NOVA-01", "EV-R02-11", "EV-R04-05", "EV-R09-02", "EV-R03-01", "EV-R05-03"]
+escopo = "sistema"
+limites = "é uma regra de escolha, não de estilo. ver docs/metodo/ambiente.md."
