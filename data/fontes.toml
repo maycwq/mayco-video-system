@@ -1,0 +1,244 @@
+# inventário de fontes primárias e secundárias.
+# cada fonte tem um id estável (S-...). evidências em evidencias.toml apontam para esses ids.
+# campos: id, tipo, titulo, localizador, acesso (acessada | parcial | inacessivel), coletada_em, publicavel, notas
+# publicavel diz o que pode ir pro repositório: "metadados" (descrição, ids, tempos), "trechos" (citações curtas), "nada".
+
+[[fonte]]
+id = "S-PEDIDO"
+tipo = "pedido do usuário"
+titulo = "pedido de reconstrução integral do mayco-video-system (sessão de 2026-11-04)"
+localizador = "mensagem do usuário na sessão de reconstrução"
+acesso = "acessada"
+coletada_em = "2026-11-04"
+publicavel = "trechos"
+notas = "fonte das instruções explícitas atuais e dos achados preparatórios atribuídos ao ChatGPT. os achados preparatórios entram como relato secundário (S-PREP), não como fato."
+
+[[fonte]]
+id = "S-PREP"
+tipo = "relato secundário"
+titulo = "achados da investigação preparatória feita pelo ChatGPT, citados no pedido"
+localizador = "seções 2.2, 2.3, 5 e 6 do pedido"
+acesso = "parcial"
+coletada_em = "2026-11-04"
+publicavel = "trechos"
+notas = "não há acesso às conversas que sustentam esses achados. tratados como hipótese ou implementação relatada até verificação."
+
+[[fonte]]
+id = "S-CHAT-01"
+tipo = "conversa ChatGPT"
+titulo = "conversa 01 do projeto mayco personal branding"
+localizador = "chatgpt.com/g/g-p-69fb9d0395bc8191a4a9ab15455eaf3e-mayco-personal-branding/c/6a86f9b4-8a68-83e9-993d-2ff9523abe23"
+acesso = "inacessivel"
+coletada_em = "2026-11-04"
+publicavel = "nada"
+notas = "link privado. acesso anônimo devolve página vazia. não há conector nem exportação no ambiente. conteúdo não foi lido."
+
+[[fonte]]
+id = "S-CHAT-02"
+tipo = "conversa ChatGPT"
+titulo = "conversa 02 do projeto mayco personal branding"
+localizador = "chatgpt.com/g/g-p-69fb9d0395bc8191a4a9ab15455eaf3e-mayco-personal-branding/c/6a9a10f4-7ccc-83e9-92db-965a8a11bdf9"
+acesso = "inacessivel"
+coletada_em = "2026-11-04"
+publicavel = "nada"
+notas = "mesma situação da conversa 01."
+
+[[fonte]]
+id = "S-CHAT-03"
+tipo = "conversa ChatGPT"
+titulo = "conversa 03 do projeto mayco personal branding"
+localizador = "chatgpt.com/g/g-p-69fb9d0395bc8191a4a9ab15455eaf3e-mayco-personal-branding/c/6aa3632f-79a4-83e9-9c55-a10c89f071da"
+acesso = "inacessivel"
+coletada_em = "2026-11-04"
+publicavel = "nada"
+notas = "mesma situação da conversa 01."
+
+[[fonte]]
+id = "S-CHAT-04"
+tipo = "conversa ChatGPT"
+titulo = "conversa 04 do projeto mayco personal branding"
+localizador = "chatgpt.com/g/g-p-69fb9d0395bc8191a4a9ab15455eaf3e-mayco-personal-branding/c/6aa46232-4b8c-83e9-a4f6-4f9249be8db5"
+acesso = "inacessivel"
+coletada_em = "2026-11-04"
+publicavel = "nada"
+notas = "mesma situação da conversa 01."
+
+[[fonte]]
+id = "S-CHAT-05"
+tipo = "conversa ChatGPT"
+titulo = "conversa 05 do projeto mayco personal branding"
+localizador = "chatgpt.com/g/g-p-69fb9d0395bc8191a4a9ab15455eaf3e-mayco-personal-branding/c/6abd5ea4-6c94-83e9-bf25-7dc1bd2f2f81"
+acesso = "inacessivel"
+coletada_em = "2026-11-04"
+publicavel = "nada"
+notas = "mesma situação da conversa 01. as conversas complementares sobre REELS/02, 04, 07, 08, 09 e sobre as bibliotecas também não foram localizadas."
+
+[[fonte]]
+id = "S-FIG-PRINCIPAL"
+tipo = "arquivo Figma"
+titulo = "mayco | frame director"
+localizador = "figma.com/design/w2rE3CcMo1N6ghUR0ZJ4Yl"
+acesso = "acessada"
+coletada_em = "2026-11-04"
+publicavel = "metadados"
+notas = "lido via Figma MCP (somente leitura: get_metadata, use_figma com scripts de leitura, get_screenshot, export_video). nenhum nó foi alterado. páginas: pilot, reels 02 a 10, reels descartado, reels 05 archive."
+
+[[fonte]]
+id = "S-FIG-DS"
+tipo = "arquivo Figma"
+titulo = "mayco video system | design system"
+localizador = "figma.com/design/dEUTXOotK1B1CCWeFG4u2U"
+acesso = "acessada"
+coletada_em = "2026-11-05"
+publicavel = "metadados"
+notas = "catálogo de padrões com descrições AI_MOTION_PATTERN v1 e AI_HUMOR_PATTERN, templates 16:9 e 9:16, componentes Narrative, Media/Slot e Connector."
+
+[[fonte]]
+id = "S-FIG-EPHEMERA"
+tipo = "arquivo Figma"
+titulo = "mayco video system | ephemera kit"
+localizador = "figma.com/design/sSQDsHODTB9l28tE3OmX9U"
+acesso = "acessada"
+coletada_em = "2026-11-05"
+publicavel = "metadados"
+notas = "75 componentes em 6 famílias. imagens de terceiros possíveis: não redistribuir."
+
+[[fonte]]
+id = "S-FIG-MEDIA"
+tipo = "arquivo Figma"
+titulo = "mayco video system | media players"
+localizador = "figma.com/design/naL9pVjfNRwVZnVuKFak0c"
+acesso = "acessada"
+coletada_em = "2026-11-05"
+publicavel = "metadados"
+notas = "26 componentes Spotify + 8 patterns."
+
+[[fonte]]
+id = "S-FIG-SOCIAL"
+tipo = "arquivo Figma"
+titulo = "mayco video system | social interfaces"
+localizador = "figma.com/design/yeGqjs9vgHNawa9ogXSYZj"
+acesso = "acessada"
+coletada_em = "2026-11-05"
+publicavel = "metadados"
+notas = "componentes de Instagram (140) + patterns. nenhum uso encontrado nos stages verificados."
+
+[[fonte]]
+id = "S-FIG-APPLE"
+tipo = "arquivo Figma"
+titulo = "mayco video system | apple legacy"
+localizador = "figma.com/design/3hFk5S3rfjCw6BKtofT0H6"
+acesso = "acessada"
+coletada_em = "2026-11-05"
+publicavel = "metadados"
+notas = "249 componentes. nenhum uso encontrado nos stages verificados."
+
+[[fonte]]
+id = "S-FIG-WIN95"
+tipo = "arquivo Figma"
+titulo = "mayco video system | windows 95"
+localizador = "figma.com/design/vZE1sTwQogBKzaUaK1OmC8"
+acesso = "acessada"
+coletada_em = "2026-11-05"
+publicavel = "metadados"
+notas = "120 componentes. nenhum uso encontrado nos stages verificados."
+
+[[fonte]]
+id = "S-FIG-UI3"
+tipo = "arquivo Figma"
+titulo = "UI3 | Figma's UI Kit (Community)"
+localizador = "figma.com/design/TxOX9uACI5u0O0K3olKXtV"
+acesso = "acessada"
+coletada_em = "2026-11-05"
+publicavel = "metadados"
+notas = "kit comunitário. usado no REELS/03. no REELS/02 o nome cita UI3, mas o conteúdo é imagem do canvas real."
+
+[[fonte]]
+id = "S-IG-A"
+tipo = "reel publicado"
+titulo = "instagram @maycwq reel DcEFmHHuMeU (REELS/02)"
+localizador = "https://www.instagram.com/maycwq/reel/DcEFmHHuMeU/"
+acesso = "acessada"
+coletada_em = "2026-11-04"
+publicavel = "metadados"
+notas = "baixado com yt-dlp anônimo só para análise local. publicado em 2026-08-15. o arquivo não entra no repositório."
+
+[[fonte]]
+id = "S-IG-B"
+tipo = "reel publicado"
+titulo = "instagram @maycwq reel DcZTxxxp9BK (REELS/05)"
+localizador = "https://www.instagram.com/maycwq/reel/DcZTxxxp9BK/"
+acesso = "acessada"
+coletada_em = "2026-11-04"
+publicavel = "metadados"
+notas = "publicado em 2026-08-23. o arquivo não entra no repositório."
+
+[[fonte]]
+id = "S-IG-C"
+tipo = "reel publicado"
+titulo = "instagram @maycwq reel DceAVGIOUhc (REELS/04)"
+localizador = "https://www.instagram.com/maycwq/reel/DceAVGIOUhc/"
+acesso = "acessada"
+coletada_em = "2026-11-04"
+publicavel = "metadados"
+notas = "publicado em 2026-08-25. versão do Instagram é 960x720, reduzida em relação ao master 1440x1080."
+
+[[fonte]]
+id = "S-MP4-R02"
+tipo = "render original"
+titulo = "REELS_02 · HORIZONTAL · 1920×1080 · TEMPORAL STAGE(4).mp4"
+localizador = "anexo da conversa preparatória no ChatGPT"
+acesso = "inacessivel"
+coletada_em = "2026-11-04"
+publicavel = "nada"
+notas = "não estava nos anexos, no Drive nem no ambiente. só conhecido pelo relato (S-PREP)."
+
+[[fonte]]
+id = "S-MP4-R04"
+tipo = "render original"
+titulo = "REELS_04 · 4_3 · 1440×1080 · TEMPORAL STAGE · MAYCO SYSTEM + REAL MEDIA.mp4"
+localizador = "anexo da conversa preparatória no ChatGPT"
+acesso = "inacessivel"
+coletada_em = "2026-11-04"
+publicavel = "nada"
+notas = "mesma situação do render do REELS/02."
+
+[[fonte]]
+id = "S-FIG-EXPORT"
+tipo = "render gerado na investigação"
+titulo = "exportações via Figma MCP export_video"
+localizador = "nós 860:2968 (REEL 06), 389:3334 (REELS/03 v3), 1353:5529 (REELS/07 QA final mix)"
+acesso = "parcial"
+coletada_em = "2026-11-05"
+publicavel = "metadados"
+notas = "stages longos (REELS/02 35,9 s; REELS/07 59,3 s, mesmo a 5 fps e 0,25x) estouram o limite de 60 s da chamada. só frames curtos ou simples exportaram."
+
+[[fonte]]
+id = "S-DRIVE"
+tipo = "google drive"
+titulo = "Google Drive da conta conectada"
+localizador = "conector Google Drive"
+acesso = "parcial"
+coletada_em = "2026-11-04"
+publicavel = "nada"
+notas = "nenhum render de REELS nem exportação de conversa encontrado. existe demo-olue.mp4 (90 MB, 2026-10-27, pasta Olue) e PDFs de telas web da Olue: não analisados, fora do escopo dos reels estudados."
+
+[[fonte]]
+id = "S-MANUAL-VOZ"
+tipo = "documento fornecido"
+titulo = "mayco, manual de tom de voz (versão 2.1, maio 2026)"
+localizador = "anexo da sessão de reconstrução (mayco_tom_de_voz_manual.pdf)"
+acesso = "acessada"
+coletada_em = "2026-11-04"
+publicavel = "trechos"
+notas = "lido por inteiro (11 páginas). o repositório resume regras aplicáveis; não copia o manual."
+
+[[fonte]]
+id = "S-QA-LOCAL"
+tipo = "medição feita na investigação"
+titulo = "medições locais com ffprobe, ffmpeg e faster-whisper"
+localizador = "comandos documentados em docs/engenharia/qa-de-render.md e tools/render_qa.py"
+acesso = "acessada"
+coletada_em = "2026-11-05"
+publicavel = "metadados"
+notas = "blackdetect, freezedetect, silencedetect, ebur128, astats e transcrição com timestamps de palavra (modelo small, pt) sobre os reels publicados e o export do master do REELS/07."

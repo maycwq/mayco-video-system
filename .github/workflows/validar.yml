@@ -1,0 +1,20 @@
+name: validar base
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  validar:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: instalar ffmpeg
+        run: sudo apt-get update && sudo apt-get install -y ffmpeg
+      - name: validar documentação e registros
+        run: python3 tools/validate.py --report
+      - name: testes das ferramentas
+        run: python3 -m unittest discover -s tests -v

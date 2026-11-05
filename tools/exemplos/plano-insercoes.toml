@@ -1,0 +1,55 @@
+# exemplo ilustrativo de plano de inserções. NÃO é o mapa real do REELS/07:
+# as posições reais das pausas não estão no arquivo Figma atual, que só guarda o master já mixado.
+# os números de duração seguem o relato preparatório (fonte 47,600 s + inserções 13,050 s = 60,650 s),
+# e as posições foram escolhidas para o exemplo bater com os nomes de música ditos na fala.
+
+duracao_fonte = 47.6
+
+[[insercao]]
+rotulo = "river"
+na_fonte = 8.95
+duracao = 1.8
+audio = "musica"
+tipo = "pausa"
+
+[[insercao]]
+rotulo = "walk of fame"
+na_fonte = 10.25
+duracao = 2.3
+audio = "musica"
+tipo = "pausa"
+
+[[insercao]]
+rotulo = "night crawling"
+na_fonte = 12.35
+duracao = 2.3
+audio = "musica"
+tipo = "pausa"
+
+[[insercao]]
+rotulo = "something beautiful"
+na_fonte = 14.55
+duracao = 3.4
+audio = "musica"
+tipo = "pausa"
+
+[[insercao]]
+rotulo = "1 sun"
+na_fonte = 26.95
+duracao = 2.0
+audio = "musica"
+tipo = "pausa"
+
+[[insercao]]
+rotulo = "reborn"
+na_fonte = 29.75
+duracao = 1.25
+audio = "musica"
+tipo = "pausa"
+
+[[insercao]]
+rotulo = "collabs"
+na_fonte = 32.0
+duracao = 0.0
+audio = "fonte-continua"
+tipo = "overlay"
